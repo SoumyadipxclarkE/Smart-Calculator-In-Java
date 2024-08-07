@@ -1,2 +1,31 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+//Calculator Using Java
+import java.util.Scanner;
+class Calculator{
+    public static void main(String[] args){
+        double a, b;
+        char op;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Any Single Operator(+, -, *, /): ");
+        String input = sc.nextLine();
+        op = !input.isEmpty() ? input.charAt(0) : '+';//Ternary operator For Default Function's Operaton if No Character is Selected
+        System.out.print("Enter First Operand: ");
+        a = sc.nextDouble();
+        System.out.print("Enter First Operand: ");
+        b = sc.nextDouble();
+        sc.close();
+        switch(op){
+            case '+':
+                System.out.print(a+" + "+b+" = "+(a+b)+"\n");
+            break;
+            case '-':
+                System.out.print(a+" - "+b+" = "+(a-b)+"\n");
+            break;
+            case '*':
+                System.out.print(a+" * "+b+" = "+(a*b)+"\n");
+            break;
+            case '/':
+                System.out.print(a+" / "+b+" = "+(a/b)+"\n");
+            break;
+        }
+    }
+}
